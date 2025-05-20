@@ -1,872 +1,196 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y6t - Hall of Autism</title>
-	<meta name="description" content="retards">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="y6t - Hall of Autism">
-	<meta property="og:description" content="retards.">
-    <link rel="stylesheet" href="hoa/index.css">
-    <link href="hoa/awesome.css" rel="stylesheet">
-<link href="hoa/retard.css" rel="stylesheet">
-<link href="hoa/dropdown.css" rel="stylesheet">
-<link href="hoa/doxbin.css" rel="stylesheet">
-<script src="hoa/jquery.min.js"></script>
-<script src="hoa/js.js"></script> 
-	<style>
-		html{
-			overflow-x: hidden;
-		}
-	input[type=text], select, option{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-		width: 200px;
-	}
-
-	input[type=text]::placeholder{
-		color: rgb(167, 167, 167);
-	}
-	input[type=submit]{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-	}
-	input, select, option{
-		font-size: 100%;
-	}
-	input[type=submit]:hover{
-		color: white;
-		background: #3d3d3d;
-		text-decoration: none;
-	}
-	.center {
-	  text-align: center;
-	}
-    .admin-text{
-        color: red;
-        font-weight: bold;
-    }
-	.doxbin-text{
-		text-align:center;
-		background-color: inherit;
-		line-height:15px;
-		border: none;
-		color: white;
-		padding-bottom:0;
-		margin-bottom:0;
-	}
-	.hoa-title{
-		margin: 5px 0 0 0;
-		letter-spacing: 2px;
-	}
-	.hoa-container{
-		border: solid 1px rgb(40, 40, 40);
-		background-color: rgb(14, 14, 14);
-		width: 32%;
-		border-radius: 2px;
-		float: left;
-		margin: 10px 5px 10px 5px;
-		position: relative;
-		padding: 15px;
-		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		height: 460px;
-	}
-	.hoa-container:hover{
-		border: solid 1px rgb(44, 44, 44);
-		background-color: rgb(18, 18, 18);
-	}
-	.hoa-container .hoa-image{
-		text-align: center;
-		max-height: 215px;
-		border-bottom: solid 1px rgb(40, 40, 40);
-	}
-	.hoa-container .hoa-image img{
-		width: 100%;
-		height: 200px;
-		max-width: 200px;
-		max-height: 200px;
-		margin-bottom: 15px;
-	}
-	.hoa-container .hoa-name{
-		padding-top: 10px;
-		text-align: center;
-		color: white;
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.hoa-container .hoa-description{
-		margin-top: 5px;
-		text-align: center;
-		color: rgb(200,200,200);
-		word-wrap: break-word;
-		overflow-y: auto;
-		height: 160px;
-	}
-	@media  only screen and (max-width: 991px) {
-		.hoa-container{
-			width: 48%;
-		}
-	}
-	@media  only screen and (max-width: 575px) {
-		.hoa-container{
-			width: 100%;
-		}
-	}
-	@media  only screen and (max-width: 271px) {
-		.doxbin-text{
-			font-size: 9px;
-			line-height: 10px;
-		}
-		.hoa-title{
-			font-size: 16px;
-			letter-spacing: 2px;
-		}
-	}
-	::-webkit-scrollbar { /*scroll bar*/
-		width: 7px;
-	}
-	
-	/* Track */
-	::-webkit-scrollbar-track {
-		background: #cacaca; 
-	}
-	
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		background: rgb(110, 110, 110); 
-	}
-	
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: rgb(68, 68, 68); 
-	}
-	
-	.rainbow {  
-	   /* Font options */
-	  text-shadow: 2px 2px 4px #000000;
-	  
-	   /* Chrome, Safari, Opera */
-	  -webkit-animation: rainbow 5s infinite; 
-	  
-	  /* Internet Explorer */
-	  -ms-animation: rainbow 5s infinite;
-	  
-	  /* Standar Syntax */
-	  animation: rainbow 5s infinite; 
-	}
-
-	/* Chrome, Safari, Opera */
-	@-webkit-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
-
-	/* Internet Explorer */
-	@-ms-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
-
-	/* Standar Syntax */
-	@keyframes  rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
-	</style>
-
-	<script>
-	var colour="random";
-		var sparkles=50;
-
-		var x=ox=400;
-		var y=oy=300;
-		var swide=800;
-		var shigh=600;
-		var sleft=sdown=0;
-		var tiny=new Array();
-		var star=new Array();
-		var starv=new Array();
-		var starx=new Array();
-		var stary=new Array();
-		var tinyx=new Array();
-		var tinyy=new Array();
-		var tinyv=new Array();
-
-		window.onload=function() { if (document.getElementById) {
-		  var i, rats, rlef, rdow;
-		  for (var i=0; i<sparkles; i++) {
-		    var rats=createDiv(3, 3);
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    document.body.appendChild(tiny[i]=rats);
-		    starv[i]=0;
-		    tinyv[i]=0;
-		    var rats=createDiv(5, 5);
-		    rats.style.backgroundColor="transparent";
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    var rlef=createDiv(1, 5);
-		    var rdow=createDiv(5, 1);
-		    rats.appendChild(rlef);
-		    rats.appendChild(rdow);
-		    rlef.style.top="2px";
-		    rlef.style.left="0px";
-		    rdow.style.top="0px";
-		    rdow.style.left="2px";
-		    document.body.appendChild(star[i]=rats);
-		  }
-		  set_width();
-		  sparkle();
-		}}
-
-		function sparkle() {
-		  var c;
-		  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-		    ox=x;
-		    oy=y;
-		    for (c=0; c<sparkles; c++) if (!starv[c]) {
-		      star[c].style.left=(starx[c]=x)+"px";
-		      star[c].style.top=(stary[c]=y+1)+"px";
-		      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-		      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-		      star[c].style.visibility="visible";
-		      starv[c]=50;
-		      break;
-		    }
-		  }
-		  for (c=0; c<sparkles; c++) {
-		    if (starv[c]) update_star(c);
-		    if (tinyv[c]) update_tiny(c);
-		  }
-		  setTimeout("sparkle()", 40);
-		}
-
-		function update_star(i) {
-		  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-		  if (starv[i]) {
-		    stary[i]+=1+Math.random()*3;
-		    starx[i]+=(i%5-2)/5;
-		    if (stary[i]<shigh+sdown) {
-		      star[i].style.top=stary[i]+"px";
-		      star[i].style.left=starx[i]+"px";
-		    }
-		    else {
-		      star[i].style.visibility="hidden";
-		      starv[i]=0;
-		      return;
-		    }
-		  }
-		  else {
-		    tinyv[i]=50;
-		    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-		    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-		    tiny[i].style.width="2px";
-		    tiny[i].style.height="2px";
-		    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-		    star[i].style.visibility="hidden";
-		    tiny[i].style.visibility="visible"
-		  }
-		}
-
-		function update_tiny(i) {
-		  if (--tinyv[i]==25) {
-		    tiny[i].style.width="1px";
-		    tiny[i].style.height="1px";
-		  }
-		  if (tinyv[i]) {
-		    tinyy[i]+=1+Math.random()*3;
-		    tinyx[i]+=(i%5-2)/5;
-		    if (tinyy[i]<shigh+sdown) {
-		      tiny[i].style.top=tinyy[i]+"px";
-		      tiny[i].style.left=tinyx[i]+"px";
-		    }
-		    else {
-		      tiny[i].style.visibility="hidden";
-		      tinyv[i]=0;
-		      return;
-		    }
-		  }
-		  else tiny[i].style.visibility="hidden";
-		}
-
-		document.onmousemove=mouse;
-		function mouse(e) {
-		  if (e) {
-		    y=e.pageY;
-		    x=e.pageX;
-		  }
-		  else {
-		    set_scroll();
-		    y=event.y+sdown;
-		    x=event.x+sleft;
-		  }
-		}
-
-		window.onscroll=set_scroll;
-		function set_scroll() {
-		  if (typeof(self.pageYOffset)=='number') {
-		    sdown=self.pageYOffset;
-		    sleft=self.pageXOffset;
-		  }
-		  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-		    sdown=document.body.scrollTop;
-		    sleft=document.body.scrollLeft;
-		  }
-		  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-		    sleft=document.documentElement.scrollLeft;
-		    sdown=document.documentElement.scrollTop;
-		  }
-		  else {
-		    sdown=0;
-		    sleft=0;
-		  }
-		}
-
-		window.onresize=set_width;
-		function set_width() {
-		  var sw_min=999999;
-		  var sh_min=999999;
-		  if (document.documentElement && document.documentElement.clientWidth) {
-		    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-		    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-		  }
-		  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-		    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-		    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-		  }
-		  if (document.body.clientWidth) {
-		    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-		    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-		  }
-		  if (sw_min==999999 || sh_min==999999) {
-		    sw_min=800;
-		    sh_min=600;
-		  }
-		  swide=sw_min;
-		  shigh=sh_min;
-		}
-
-		function createDiv(height, width) {
-		  var div=document.createElement("div");
-		  div.style.position="absolute";
-		  div.style.height=height+"px";
-		  div.style.width=width+"px";
-		  div.style.overflow="hidden";
-		  return (div);
-		}
-
-		function newColour() {
-		  var c=new Array();
-		  c[0]=255;
-		  c[1]=Math.floor(Math.random()*256);
-		  c[2]=Math.floor(Math.random()*(256-c[1]/2));
-		  c.sort(function(){return (0.5 - Math.random());});
-		  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-		}
-	</script>
+    <title>login</title>
+    <link rel="icon" href="https://r2.drifloons.us/o69bqd.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="./assets/js/index.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+ 
+        * {
+            user-select: none;
+        }
+        .login-container {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .boot-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .windows-logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Windows_logo_-_2012.svg/2048px-Windows_logo_-_2012.svg.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: zoomPulse 3s infinite;
+        }
+        .android-logo {
+            width: 100px;
+            height: 100px;
+            background-image: url('https://cdn.freebiesupply.com/logos/large/2x/android-logo-png-transparent.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            animation: zoomPulse 3s infinite;
+        }
+        .loading-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: white;
+            border-radius: 50%;
+            margin: 0 5px;
+            animation: dotPulse 1.5s infinite;
+        }
+        .dot:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        .dot:nth-child(3) {
+            animation-delay: 1s;
+        }
+        @keyframes zoomPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+        @keyframes dotPulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.2); opacity: 1; }
+        }
+    </style>
 </head>
+<body class="h-full overflow-hidden bg-cover bg-center bg-blue-100" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://files.catbox.moe/o69bqd.jpg');">
+    <div id="boot-screen" class="boot-screen">
+        <div id="boot-logo" class="windows-logo"></div>
+        <p id="boot-text" class="text-white text-xl font-semibold mt-8">Booting Windows</p>
+        <div class="loading-dots">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
 
-<body>
-	<audio id="hoa-audio" src="https://files.offshore.cat/R0RCHsTh.mp3" autoplaystyle="display:none"></audio>
-	<div class="col-md-12" style="margin-top: 60px;">
-		<div class="center">
-			<pre class="doxbin-text">
-		
+    <div id="login-content" class="hidden fixed inset-0">
+        <div class="flex flex-col items-center justify-center h-full login-container">
+            <img src="https://files.catbox.moe/h1jrrf.jpg" alt="Profile" class="w-32 h-32 rounded-full mb-4 shadow-lg">
+            <h2 class="text-3xl font-semibold text-white">Y6t</h2>
+            <div class="rounded-lg p-8 w-80">
+                <form id="loginForm" class="space-y-4">
+                    <select id="passwordSelect" class="w-full px-4 py-2 rounded-md bg-zinc-900 text-white focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="" disabled selected>Select password</option>
+                        <option value="password1">D8E#y_z5vP4AP11r2L</option>
+                    </select>
+                </form>
+            </div>
+            <div id="loadingAnimation" class="hidden -mt-6">
+                <div class="w-16 h-16 border-t-4 border-blue-500 border-solid rounded-full animate-spin"></div>
+            </div>
+        </div>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y6t - Hall of Autism</title>
-	<meta name="description" content="retards">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="y6t - Hall of Autism">
-	<meta property="og:description" content="retards.">
-    <link rel="stylesheet" href="hoa/index.css">
-    <link href="hoa/awesome.css" rel="stylesheet">
-<link href="hoa/retard.css" rel="stylesheet">
-<link href="hoa/dropdown.css" rel="stylesheet">
-<link href="hoa/doxbin.css" rel="stylesheet">
-<script src="hoa/jquery.min.js"></script>
-<script src="hoa/js.js"></script> 
-	<style>
-		html{
-			overflow-x: hidden;
-		}
-	input[type=text], select, option{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-		width: 200px;
-	}
+        <div class="fixed bottom-8 right-12 flex space-x-4">
+            <button class="text-white hover:text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.14 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                </svg>
+            </button>
+            <button class="text-white hover:text-gray-300">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentColor" version="1.1" id="Capa_1" class="h-6 w-6" viewBox="0 0 575.279 575.279" xml:space="preserve">
+                    <g>
+                        <g>
+                            <path d="M238.502,115.644v-46.98C120.943,91.644,31.94,195.39,31.94,319.578c-0.003,140.994,114.707,255.701,255.7,255.701    c140.992,0,255.699-114.707,255.699-255.701c0-124.188-89.006-227.934-206.561-250.915v46.98    c92.047,22.182,160.662,105.172,160.662,203.935c0,115.686-94.113,209.803-209.8,209.803    c-115.687,0-209.803-94.117-209.803-209.803C77.837,220.816,146.455,137.826,238.502,115.644z"/>
+                            <path d="M312.298,256.905V111.274V65.089V24.658C312.298,11.041,301.261,0,287.64,0c-13.62,0-24.657,11.041-24.657,24.658v40.432    v46.185v145.631c0,13.617,11.037,24.658,24.657,24.658C301.261,281.563,312.298,270.522,312.298,256.905z"/>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
 
-	input[type=text]::placeholder{
-		color: rgb(167, 167, 167);
-	}
-	input[type=submit]{
-		line-height: 1.2;
-		color: white;
-		background: #282828;
-		border: 0;
-		border-radius: 2px;
-		display: inline-block;
-		-webkit-font-smoothing: antialiased;
-		outline: none;
-		padding: 7px 5px;
-	}
-	input, select, option{
-		font-size: 100%;
-	}
-	input[type=submit]:hover{
-		color: white;
-		background: #3d3d3d;
-		text-decoration: none;
-	}
-	.center {
-	  text-align: center;
-	}
-    .admin-text{
-        color: red;
-        font-weight: bold;
-    }
-	.doxbin-text{
-		text-align:center;
-		background-color: inherit;
-		line-height:15px;
-		border: none;
-		color: white;
-		padding-bottom:0;
-		margin-bottom:0;
-	}
-	.hoa-title{
-		margin: 5px 0 0 0;
-		letter-spacing: 2px;
-	}
-	.hoa-container{
-		border: solid 1px rgb(40, 40, 40);
-		background-color: rgb(14, 14, 14);
-		width: 32%;
-		border-radius: 2px;
-		float: left;
-		margin: 10px 5px 10px 5px;
-		position: relative;
-		padding: 15px;
-		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-		height: 460px;
-	}
-	.hoa-container:hover{
-		border: solid 1px rgb(44, 44, 44);
-		background-color: rgb(18, 18, 18);
-	}
-	.hoa-container .hoa-image{
-		text-align: center;
-		max-height: 215px;
-		border-bottom: solid 1px rgb(40, 40, 40);
-	}
-	.hoa-container .hoa-image img{
-		width: 100%;
-		height: 200px;
-		max-width: 200px;
-		max-height: 200px;
-		margin-bottom: 15px;
-	}
-	.hoa-container .hoa-name{
-		padding-top: 10px;
-		text-align: center;
-		color: white;
-		font-size: 20px;
-		font-weight: bold;
-	}
-	.hoa-container .hoa-description{
-		margin-top: 5px;
-		text-align: center;
-		color: rgb(200,200,200);
-		word-wrap: break-word;
-		overflow-y: auto;
-		height: 160px;
-	}
-	@media  only screen and (max-width: 991px) {
-		.hoa-container{
-			width: 48%;
-		}
-	}
-	@media  only screen and (max-width: 575px) {
-		.hoa-container{
-			width: 100%;
-		}
-	}
-	@media  only screen and (max-width: 271px) {
-		.doxbin-text{
-			font-size: 9px;
-			line-height: 10px;
-		}
-		.hoa-title{
-			font-size: 16px;
-			letter-spacing: 2px;
-		}
-	}
-	::-webkit-scrollbar { /*scroll bar*/
-		width: 7px;
-	}
-	
-	/* Track */
-	::-webkit-scrollbar-track {
-		background: #cacaca; 
-	}
-	
-	/* Handle */
-	::-webkit-scrollbar-thumb {
-		background: rgb(110, 110, 110); 
-	}
-	
-	/* Handle on hover */
-	::-webkit-scrollbar-thumb:hover {
-		background: rgb(68, 68, 68); 
-	}
-	
-	.rainbow {  
-	   /* Font options */
-	  text-shadow: 2px 2px 4px #000000;
-	  
-	   /* Chrome, Safari, Opera */
-	  -webkit-animation: rainbow 5s infinite; 
-	  
-	  /* Internet Explorer */
-	  -ms-animation: rainbow 5s infinite;
-	  
-	  /* Standar Syntax */
-	  animation: rainbow 5s infinite; 
-	}
+    <script>
+        window.addEventListener('load', function() {
+            const isMobile = window.innerWidth <= 728;
+            const bootLogo = document.getElementById('boot-logo');
+            const bootText = document.getElementById('boot-text');
 
-	/* Chrome, Safari, Opera */
-	@-webkit-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
+            if (isMobile) {
+                bootLogo.classList.remove('windows-logo');
+                bootLogo.classList.add('android-logo');
+                bootText.textContent = 'Booting Android';
+            } else {
+                bootLogo.classList.add('windows-logo');
+                bootText.textContent = 'Booting Windows';
+            }
 
-	/* Internet Explorer */
-	@-ms-keyframes rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
+            setTimeout(function() {
+                document.getElementById('boot-screen').style.opacity = '0';
+                document.getElementById('boot-screen').style.transition = 'opacity 1s ease-out';
+                setTimeout(function() {
+                    document.getElementById('boot-screen').style.display = 'none';
+                    document.getElementById('login-content').classList.remove('hidden');
+                }, 1000);
+            }, 5000);
+        });
 
-	/* Standar Syntax */
-	@keyframes  rainbow{
-	  	0%{color: red;}	
-		17%{color: orange;}
-		33%{color: yellow;}
-		50%{color: green;}
-		67%{color: blue;}
-		84%{color: purple;}
-	 	100%{color: red;}
-	}
-	</style>
+        document.getElementById('passwordSelect').addEventListener('change', function(e) {
+            if (e.target.value === 'password1') {
+                document.getElementById('loginForm').classList.add('hidden');
+                document.getElementById('loadingAnimation').classList.remove('hidden');
+                
+            
+                setTimeout(() => {
+                    document.getElementById('loadingAnimation').classList.add('animate-pulse');
+                }, 2000);
 
-	<script>
-	var colour="random";
-		var sparkles=50;
+             
+                setTimeout(() => {
+                    if (window.innerWidth <= 728) {
+                        window.location.href = './mobile.html';
+                    } else {
+                        window.location.href = './desktop.html';
+                    }
+                }, 4000);
+            }
+        });
 
-		var x=ox=400;
-		var y=oy=300;
-		var swide=800;
-		var shigh=600;
-		var sleft=sdown=0;
-		var tiny=new Array();
-		var star=new Array();
-		var starv=new Array();
-		var starx=new Array();
-		var stary=new Array();
-		var tinyx=new Array();
-		var tinyy=new Array();
-		var tinyv=new Array();
+  
+        window.addEventListener('load', function() {
+            const passwordSelect = document.getElementById('passwordSelect');
+            passwordSelect.selectedIndex = 0;
+        });
 
-		window.onload=function() { if (document.getElementById) {
-		  var i, rats, rlef, rdow;
-		  for (var i=0; i<sparkles; i++) {
-		    var rats=createDiv(3, 3);
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    document.body.appendChild(tiny[i]=rats);
-		    starv[i]=0;
-		    tinyv[i]=0;
-		    var rats=createDiv(5, 5);
-		    rats.style.backgroundColor="transparent";
-		    rats.style.visibility="hidden";
-		    rats.style.zIndex="999";
-		    var rlef=createDiv(1, 5);
-		    var rdow=createDiv(5, 1);
-		    rats.appendChild(rlef);
-		    rats.appendChild(rdow);
-		    rlef.style.top="2px";
-		    rlef.style.left="0px";
-		    rdow.style.top="0px";
-		    rdow.style.left="2px";
-		    document.body.appendChild(star[i]=rats);
-		  }
-		  set_width();
-		  sparkle();
-		}}
+    
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+        });
 
-		function sparkle() {
-		  var c;
-		  if (Math.abs(x-ox)>1 || Math.abs(y-oy)>1) {
-		    ox=x;
-		    oy=y;
-		    for (c=0; c<sparkles; c++) if (!starv[c]) {
-		      star[c].style.left=(starx[c]=x)+"px";
-		      star[c].style.top=(stary[c]=y+1)+"px";
-		      star[c].style.clip="rect(0px, 5px, 5px, 0px)";
-		      star[c].childNodes[0].style.backgroundColor=star[c].childNodes[1].style.backgroundColor=(colour=="random")?newColour():colour;
-		      star[c].style.visibility="visible";
-		      starv[c]=50;
-		      break;
-		    }
-		  }
-		  for (c=0; c<sparkles; c++) {
-		    if (starv[c]) update_star(c);
-		    if (tinyv[c]) update_tiny(c);
-		  }
-		  setTimeout("sparkle()", 40);
-		}
-
-		function update_star(i) {
-		  if (--starv[i]==25) star[i].style.clip="rect(1px, 4px, 4px, 1px)";
-		  if (starv[i]) {
-		    stary[i]+=1+Math.random()*3;
-		    starx[i]+=(i%5-2)/5;
-		    if (stary[i]<shigh+sdown) {
-		      star[i].style.top=stary[i]+"px";
-		      star[i].style.left=starx[i]+"px";
-		    }
-		    else {
-		      star[i].style.visibility="hidden";
-		      starv[i]=0;
-		      return;
-		    }
-		  }
-		  else {
-		    tinyv[i]=50;
-		    tiny[i].style.top=(tinyy[i]=stary[i])+"px";
-		    tiny[i].style.left=(tinyx[i]=starx[i])+"px";
-		    tiny[i].style.width="2px";
-		    tiny[i].style.height="2px";
-		    tiny[i].style.backgroundColor=star[i].childNodes[0].style.backgroundColor;
-		    star[i].style.visibility="hidden";
-		    tiny[i].style.visibility="visible"
-		  }
-		}
-
-		function update_tiny(i) {
-		  if (--tinyv[i]==25) {
-		    tiny[i].style.width="1px";
-		    tiny[i].style.height="1px";
-		  }
-		  if (tinyv[i]) {
-		    tinyy[i]+=1+Math.random()*3;
-		    tinyx[i]+=(i%5-2)/5;
-		    if (tinyy[i]<shigh+sdown) {
-		      tiny[i].style.top=tinyy[i]+"px";
-		      tiny[i].style.left=tinyx[i]+"px";
-		    }
-		    else {
-		      tiny[i].style.visibility="hidden";
-		      tinyv[i]=0;
-		      return;
-		    }
-		  }
-		  else tiny[i].style.visibility="hidden";
-		}
-
-		document.onmousemove=mouse;
-		function mouse(e) {
-		  if (e) {
-		    y=e.pageY;
-		    x=e.pageX;
-		  }
-		  else {
-		    set_scroll();
-		    y=event.y+sdown;
-		    x=event.x+sleft;
-		  }
-		}
-
-		window.onscroll=set_scroll;
-		function set_scroll() {
-		  if (typeof(self.pageYOffset)=='number') {
-		    sdown=self.pageYOffset;
-		    sleft=self.pageXOffset;
-		  }
-		  else if (document.body && (document.body.scrollTop || document.body.scrollLeft)) {
-		    sdown=document.body.scrollTop;
-		    sleft=document.body.scrollLeft;
-		  }
-		  else if (document.documentElement && (document.documentElement.scrollTop || document.documentElement.scrollLeft)) {
-		    sleft=document.documentElement.scrollLeft;
-		    sdown=document.documentElement.scrollTop;
-		  }
-		  else {
-		    sdown=0;
-		    sleft=0;
-		  }
-		}
-
-		window.onresize=set_width;
-		function set_width() {
-		  var sw_min=999999;
-		  var sh_min=999999;
-		  if (document.documentElement && document.documentElement.clientWidth) {
-		    if (document.documentElement.clientWidth>0) sw_min=document.documentElement.clientWidth;
-		    if (document.documentElement.clientHeight>0) sh_min=document.documentElement.clientHeight;
-		  }
-		  if (typeof(self.innerWidth)=='number' && self.innerWidth) {
-		    if (self.innerWidth>0 && self.innerWidth<sw_min) sw_min=self.innerWidth;
-		    if (self.innerHeight>0 && self.innerHeight<sh_min) sh_min=self.innerHeight;
-		  }
-		  if (document.body.clientWidth) {
-		    if (document.body.clientWidth>0 && document.body.clientWidth<sw_min) sw_min=document.body.clientWidth;
-		    if (document.body.clientHeight>0 && document.body.clientHeight<sh_min) sh_min=document.body.clientHeight;
-		  }
-		  if (sw_min==999999 || sh_min==999999) {
-		    sw_min=800;
-		    sh_min=600;
-		  }
-		  swide=sw_min;
-		  shigh=sh_min;
-		}
-
-		function createDiv(height, width) {
-		  var div=document.createElement("div");
-		  div.style.position="absolute";
-		  div.style.height=height+"px";
-		  div.style.width=width+"px";
-		  div.style.overflow="hidden";
-		  return (div);
-		}
-
-		function newColour() {
-		  var c=new Array();
-		  c[0]=255;
-		  c[1]=Math.floor(Math.random()*256);
-		  c[2]=Math.floor(Math.random()*(256-c[1]/2));
-		  c.sort(function(){return (0.5 - Math.random());});
-		  return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
-		}
-	</script>
-</head>
-
-<body>
-	<audio id="hoa-audio" src="https://files.offshore.cat/R0RCHsTh.mp3" autoplaystyle="display:none"></audio>
-	<div class="col-md-12" style="margin-top: 60px;">
-		<div class="center">
-			<pre class="doxbin-text">
-____    ____  __   .___________.    __    __    ______        ___      
-\   \  /   / / /   |           |   |  |  |  |  /  __  \      /   \     
- \   \/   / / /_   `---|  |----`   |  |__|  | |  |  |  |    /  ^  \    
-  \_    _/ | '_ \      |  |        |   __   | |  |  |  |   /  /_\  \   
-    |  |   | (_) |     |  |        |  |  |  | |  `--'  |  /  _____  \  
-    |__|    \___/      |__|        |__|  |__|  \______/  /__/     \__\ 
-                                                                       
-																					
-	</pre>
-			<h4 class="hoa-title rainbow"><b>HALL OF AUTISM</b></h4>
-		</div>
-		<div class="container" style="margin-top:20px;">
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="assests/Jonty.png">
-				</div>
-				<div class="hoa-name rainbow">
-					terroist764
-				</div>
-				<div class="hoa-description">
-					<b>Jonty Krause</b><br>
-					<a href="https://doxbin.com/upload/0x03Terrorist764REUPLOAD" target="_blank">Dox</a> <br>
-					Ocxia Gonzales is a age baiting manipulating cf, who larps online discord groups such as, 764, incur, etc.
-                                                            Ocixa found her way into "extortion com" in 2022, She dated the 764 member who went by "Tears764, nottears,"                                    
-                                                           She is also a loser who cuts herself for eboys on the internet, Ocxia ALSO says, "yeah i live in japan"                                   
-                                                             Yet she screenshares on her phone and the timezones dont match up, BAD OPSEC. She claims to be a coder but yet                              
-                                                              doesnt know what python is, She openly admits she skidded her "purge bot" maybe don't go on cam and show ur                                
-                                                               house next time dumbass. Enjoy                          <br>
-				</div>
-			</div>
-
-	
-	</pre>
-			<h4 class="hoa-title rainbow"><b>HALL OF AUTISM</b></h4>
-		</div>
-		<div class="container" style="margin-top:20px;">
-			<div class="hoa-container">
-				<div class="hoa-image">
-					<img src="assests/Jonty.png">
-				</div>
-				<div class="hoa-name rainbow">
-					terroist764
-				</div>
-				<div class="hoa-description">
-					<b>Jonty Krause</b><br>
-					<a href="https://doxbin.com/upload/0x03Terrorist764REUPLOAD" target="_blank">Dox</a> <br>
-					Ocxia Gonzales is a age baiting manipulating cf, who larps online discord groups such as, 764, incur, etc.
-                                                            Ocixa found her way into "extortion com" in 2022, She dated the 764 member who went by "Tears764, nottears,"                                    
-                                                           She is also a loser who cuts herself for eboys on the internet, Ocxia ALSO says, "yeah i live in japan"                                   
-                                                             Yet she screenshares on her phone and the timezones dont match up, BAD OPSEC. She claims to be a coder but yet                              
-                                                              doesnt know what python is, She openly admits she skidded her "purge bot" maybe don't go on cam and show ur                                
-                                                               house next time dumbass. Enjoy                          <br>
-				</div>
-			</div>
-
-	
+   
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault(); 
+        });
+    </script>
+</body>
+</html>
